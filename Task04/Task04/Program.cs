@@ -19,7 +19,7 @@ namespace Task04
         }
         static double F(double x)
             {
-            return Math.Abs(x+(Math.Abs(x+(Math.Abs(x+Math.Sqrt(x+1))))));
+            return Math.Abs(x+Math.Abs(x+Math.Abs(x+Math.Sqrt(x+1))));
         }
     }
 }
