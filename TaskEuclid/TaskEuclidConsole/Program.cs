@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TaskEuclid;
+
+namespace TaskEuclidConsole
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var p = new Point(1, 2.5);
+            Console.WriteLine(p.GetInfo());
+
+            var s = new Segment(new Point(1, 1), new Point(-1, 3));
+            Console.WriteLine(s.Getinfo());
+            Console.WriteLine($"длина отрезка {s.Length:F3}");
+            try
+            {
+                s = Geometry.CreateSegment(new Point(-2, 1.5), new Point(0, 0));
+                Console.WriteLine(s.Getinfo());
+
+                s = Geometry.CreateSegment(new Point(1, 1), new Point(1, 1));
+                Console.WriteLine(s.Getinfo());
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+
+            }
+        }
+    }
+}
